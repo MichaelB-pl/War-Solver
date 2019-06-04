@@ -2,6 +2,9 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 
+import MainMenu from './views/MainMenu.vue';
+import MainMenuToolbar from './views/MainMenuToolbar.vue';
+
 Vue.use(Router);
 
 export default new Router({
@@ -10,8 +13,11 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home,
+      name: 'mainMenu',
+      components: {
+        default: MainMenu,
+        toolbar: MainMenuToolbar,
+      },
     },
     {
       path: '/about',
