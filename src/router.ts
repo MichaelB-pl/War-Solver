@@ -26,5 +26,13 @@ export default new Router({
         toolbar: () => import('./views/AboutToolbar.vue'),
       },
     },
+    {
+      path: '/solver',
+      name: 'solver',
+      components: {
+        default: () => import('./views/Solver.vue'),
+        toolbar: () => import('./views/SolverToolbar.vue'),
+      },
+    },
   ],
 });
